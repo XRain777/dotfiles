@@ -1,0 +1,48 @@
+shell = "bash -c '{}'"
+
+[[item]]
+template = "kitty"
+file = "~/.config/kitty/kitty.conf"
+hook = "kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf"
+
+[[item]]
+template = "dunst"
+file = "~/.config/dunst/dunstrc"
+hook = "killall dunst && notify-send Flavours"
+
+[[item]]
+template = "gtk-flatcolor"
+subtemplate = "gtk-2"
+file = "~/.themes/FlatColor/colors2"
+rewrite = true
+hook = ""
+
+[[item]]
+template = "gtk-flatcolor"
+subtemplate = "gtk-3"
+file = "~/.themes/FlatColor/colors3"
+rewrite = true
+hook = "gsettings set org.gnome.desktop.interface gtk-theme dummy && gsettings set org.gnome.desktop.interface gtk-theme FlatColor"
+
+[[item]]
+template = "rofi"
+file = "~/.config/rofi/base16-theme.rasi"
+rewrite = true
+
+[[item]]
+template = "vim"
+file = "~/.config/nvim/init.vim"
+start = "\" Start flavours"
+end = "\" End flavours"
+
+[[item]]
+template = "xresources"
+file = "~/.Xresources.d/colors"
+rewrite = true
+hook = "xrdb -load /home/xrain/.Xresources && i3-msg -t run_command reload"
+
+[[item]]
+template = "zathura"
+file = "~/.config/zathura/zathurarc"
+
+
