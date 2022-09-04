@@ -1,0 +1,21 @@
+[user]
+    email = nikita.starikov@gmail.com
+    name = Nikita Starikov
+[core]
+    editor = nvim 
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true 
+    side-by-side = false
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+[push]
+    default = current
+[url "https://github.com/"]
+    insteadOf = "git://github.com/"
+[init]
+    defaultBranch = master
