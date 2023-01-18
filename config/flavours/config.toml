@@ -41,8 +41,5 @@ file = "~/.Xresources.d/colors"
 rewrite = true
 hook = "xrdb -load /home/xrain/.Xresources && i3-msg -t run_command reload"
 
-[[item]]
-template = "zathura"
-file = "~/.config/zathura/zathurarc"
 
 
